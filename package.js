@@ -1,5 +1,5 @@
 Package.describe({
-    summary: "Accounts Templates styled for Twitter Bootstrap."
+    summary: "Accounts Templates styled for ScotchDr.am"
 });
 
 Package.on_use(function(api, where) {
@@ -12,9 +12,9 @@ Package.on_use(function(api, where) {
     ], 'client');
 
     api.add_files([
-        'lib/accounts-templates-bootstrap.html',
-        'lib/accounts-templates-bootstrap.js',
-        'lib/accounts-templates-bootstrap.less'
+        'lib/accounts-templates-scotchapp.html',
+        'lib/accounts-templates-scotchapp.js',
+        'lib/accounts-templates-scotchapp.less'
     ], ['client']);
 
     api.use([
@@ -32,9 +32,9 @@ Package.on_use(function(api, where) {
 
 Package.on_test(function(api) {
     api.use([
-        'accounts-templates-bootstrap',
+        'accounts-templates-scotchapp',
         'accounts-templates-core',
     ]);
     api.use(['tinytest', 'test-helpers'], ['client', 'server']);
-    api.add_files('tests/accounts-templates-bootstrap_tests.js', ['client', 'server']);
+    api.add_files('tests/accounts-templates-scotchapp_tests.js', ['client', 'server']);
 });
